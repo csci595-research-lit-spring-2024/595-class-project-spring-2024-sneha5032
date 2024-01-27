@@ -2,87 +2,65 @@
 \label{ch:into} % This how you label a chapter and the key (e.g., ch:into) will be used to refer this chapter ``Introduction'' later in the report. 
 % the key ``ch:into'' can be used with command \ref{ch:intor} to refere this Chapter.
 
-\textbf{Guidance on introduction chapter writing:} Introductions are written in the following parts:
-\begin{itemize}
-    \item A brief  description of the investigated problem.
-    \item A summary of the scope and context of the project, i.e., what is the background of the topic/problem/application/system/algorithm/experiment/research question/hypothesis/etc. under investigation/implementation/development [whichever is applicable to your project].
-    \item The aims and objectives of the project.
-    \item A description of the problem and the methodological approach adopted to solve the problem.
-    \item A summary of the most significant outcomes and their interpretations.
-    \item Organization of the report. 
-\end{itemize}
+Twitter has emerged as a ubiquitous platform for event reporting, facilitated by the widespread use of smartphones. This dynamic environment offers unparalleled opportunities for immediate and decentralized communication, especially during critical events such as disasters. The advent of this digital era has underscored the pressing need for effective crisis communication strategies to harness the potential of Twitter as a valuable tool for situational awareness and emergency response.
 
+However, amidst the wealth of real-time data flowing through Twitter feeds, a significant challenge arises in the accurate identification and differentiation of metaphorical expressions from authentic crisis-related information within tweets. Metaphors, while a powerful linguistic tool for expression, often introduce ambiguity and complexity, posing a considerable hurdle in the quest for reliable crisis detection. The inherent nature of metaphorical language requires a nuanced understanding that transcends traditional analytical approaches, demanding innovative solutions to decipher the true intent behind tweets during critical events.
 
-Consult \textbf{your supervisor} to check the content of the introduction chapter. In this template, we only offer basic sections of an introduction chapter. It may  not be complete and comprehensive. Writing a report is a subjective matter, and a report's style and structure depend on the ``type of project'' as well as an individual's preference. This template suits the following project paradigms:
-\begin{enumerate}
-    \item software engineering and software/web application development;
-    \item algorithm implementation, analysis and/or application;  
-    \item science lab (experiment); and
-    \item pure theoretical development (not mention extensively).
-\end{enumerate}
-
-Use only a single \textbf{font} for the body text. We recommend using a clean and electronic document friendly font like \textbf{Arial} or \textbf{Calibri} for MS-word (If you create a report in MS word). If you use this template, DO NOT ALTER the template's default font ``amsfont default computer modern''. The default \LaTeX~font ``computer modern'' is also acceptable. 
-
-The recommended body text \textbf{font size} is minimum \textbf{11pt} and minimum one-half line spacing. The recommended figure/table caption font size is minimum 10pt. The footnote\footnote{Example footnote: footnotes are useful for adding external sources such as links as well as extra information on a topic or word or sentence. Use command \textbackslash footnote\{...\} next to a word to generate a footnote in \LaTeX.} font size is minimum 8pt. DO NOT ALTER the font setting of this template.   
+This research embarks on the journey to address this multifaceted challenge by delving into the intricacies of Twitter communication during crises. The aim is to develop a sophisticated machine learning framework capable of distinguishing between metaphorical language and genuine crisis-related information. Leveraging the prevalence of smartphones and the instantaneous nature of Twitter reporting, this study seeks to contribute to the advancement of crisis communication strategies, fostering a more effective and accurate response to emergencies in the digital age.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 \label{sec:into_back}
-Describe to a reader the context of your project. That is, what is your project and what its motivation. Briefly explain the major theories, applications, and/or products/systems/algorithms whichever is relevant to your project.
+The motivation stems from the critical need for effective crisis communication strategies in utilizing Twitter as a valuable tool for situational awareness and emergency response.
 
-\textbf{Cautions:} Do not say you choose this project because of your interest, or your supervisor proposed/suggested this project, or you were assigned this project as your final year project. This all may be true, but it is not meant to be written here.
+The central challenge lies in accurately discerning metaphorical expressions from genuine crisis-related information within tweets. Metaphors, while powerful for expression, introduce ambiguity, posing a significant hurdle to reliable crisis detection. This project addresses this challenge through the development of a sophisticated machine learning framework, drawing on established classification algorithms with intentional omission of specific names for flexibility. Hyperparameter tuning and model selection are explored for optimization. Concurrently, Natural Language Processing (NLP) models capture contextual nuances to enhance metaphorical language understanding.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem statement}
 \label{sec:intro_prob_art}
-This section describes the investigated problem in detail. You can also have a separate chapter on ``Problem articulation.''  For some projects, you may have a section like ``Research question(s)'' or ``Research Hypothesis'' instead of a section on ``Problem statement.'
+
+The significant challenge in the realm of disaster monitoring involves distinguishing disaster-related tweets from general Twitter content. This study aims to develop a machine learning algorithm capable of addressing this challenge and accurately determining if a tweet is genuinely connected to a crisis.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Aims and objectives}
-\label{sec:intro_aims_obj}
-Describe the ``aims and objectives'' of your project. 
+\label{sec:intro_aims_obj} 
 
-\textbf{Aims:} The aims tell a read what you want/hope to achieve at the end of the project. The  aims define your intent/purpose in general terms.  
+ 
+  \textbf{Aims:}
+The primary aim of this project is to enhance the field of disaster monitoring on Twitter by developing a sophisticated machine learning framework. The goal is to accurately distinguish tweets related to disasters from the broader spectrum of general content on the platform. Through this endeavor, we seek to contribute to the improvement of crisis communication strategies in the digital age.
 
-\textbf{Objectives:} The objectives are a set of tasks you would perform in order to achieve the defined aims. The objective statements have to be specific and measurable through the results and outcome of the project.
+\textbf{Objectives:} Implement data exploration and preprocessing techniques to ensure the dataset is prepared for training and evaluation.
+Explore and apply various machine learning classification algorithms for the effective categorization of tweets, emphasizing the optimization of hyperparameters and model selection.
 
+Incorporate Natural Language Processing (NLP) models to capture contextual nuances, enhancing the understanding of metaphorical language within tweets.
+Evaluate the performance of the developed framework using rigorous metrics to ensure accuracy and reliability in distinguishing disaster-related tweets.
+Provide insights and recommendations for advancing crisis communication strategies based on the project outcomes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solution approach}
 \label{sec:intro_sol} % label of Org section
-Briefly describe the solution approach and the methodology applied in solving the set aims and objectives.
+The solution approach consists of distinct stages, including data collection, exploration, preprocessing, and the implementation of algorithms for classification and NLP.
 
-Depending on the project, you may like to alter the ``heading'' of this section. Check with you supervisor. Also, check what subsection or any other section that can be added in or removed from this template.
-
-\subsection{A subsection 1}
+\subsection{Data Collection, Exploration, and Preprocessing}
 \label{sec:intro_some_sub1}
-You may or may not need subsections here. Depending on your project's needs, add two or more subsection(s). A section takes at least two subsections. 
+\textbf{Data Exploration:} Comprehensive exploration is conducted to understand the characteristics of the dataset, including the distribution of metaphorical expressions and crisis-related content.
+\textbf{Preprocessing:} Textual data undergoes preprocessing, including tokenization, stemming, and handling of special characters, to prepare it for subsequent stages. 
 
-\subsection{A subsection 2}
+\subsection{Implementation of Algorithms}
 \label{sec:intro_some_sub2}
-Depending on your project's needs, add more section(s) and subsection(s).
+ Established machine learning classification algorithms are implemented to effectively classify tweets. Hyperparameter tuning and model selection are explored to optimize performance.
+NLP models are implemented to capture contextual nuances and improve the understanding of metaphorical language in tweets.
 
-\subsubsection{A subsection 1 of a subsection}
-\label{sec:intro_some_subsub1}
-The command \textbackslash subsubsection\{\} creates a paragraph heading in \LaTeX.
-
-\subsubsection{A subsection 2 of a subsection}
-\label{sec:intro_some_subsub2}
-Write your text here...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary of contributions and achievements} %  use this section 
 \label{sec:intro_sum_results} % label of summary of results
-Describe clearly what you have done/created/achieved and what the major results and their implications are. 
+This research contributes a sophisticated machine learning framework capable of distinguishing metaphorical language from genuine crisis-related information on Twitter. Achievements include the development of a robust algorithm, leveraging a hand-classified dataset for effective model training.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organization of the report} %  use this section
 \label{sec:intro_org} % label of Org section
-Describe the outline of the rest of the report here. Let the reader know what to expect ahead in the report. Describe how you have organized your report. 
-
-\textbf{Example: how to refer a chapter, section, subsection}. This report is organised into seven chapters. Chapter~\ref{ch:lit_rev} details the literature review of this project. In Section~\ref{ch:method}...  % and so on.
-
-\textbf{Note:}  Take care of the word like ``Chapter,'' ``Section,'' ``Figure'' etc. before the \LaTeX command \textbackslash ref\{\}. Otherwise, a  sentence will be confusing. For example, In \ref{ch:lit_rev} literature review is described. In this sentence, the word ``Chapter'' is missing. Therefore, a reader would not know whether 2 is for a Chapter or a Section or a Figure.
-
+The report follows a structured format, exploring background, problem statement, solution approach, detailed methodologies, results, discussions, and conclusions.
