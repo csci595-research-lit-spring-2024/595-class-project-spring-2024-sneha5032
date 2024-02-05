@@ -1,50 +1,18 @@
 \chapter{Literature Review}
 \label{ch:lit_rev} %Label of the chapter lit rev. The key ``ch:lit_rev'' can be used with command \ref{ch:lit_rev} to refer this Chapter.
-
-A literature review chapter can be organized in a few sections with appropriate titles. A literature review chapter might  contain the following:
-\begin{enumerate}
-    \item A review of the state-of-the-art (include theories and solutions) of the field of research.
-    \item A description of the project in the context of existing literature and products/systems.
-    \item An analysis of how the review is relevant to the intended application/system/problem.
-    \item A critique of existing work compared with the intended work.
-\end{enumerate}
-Note that your literature review should demonstrate the significance of the project.
+Recognizing the imperative for automated solutions to distinguish genuine disaster-related tweets from metaphorical or unrelated content, the research gets crucial reference, aiding in exploring effective approaches and refining the accuracy of disaster-related tweet prediction models from this Kaggle competition \cite{nlp-getting-started} \cite{nlp-getting-started2}. With widespread smartphone use, Twitter becomes a primary source for disaster-related information. Utilizing a dataset of 10,000 hand-classified tweets, the goal is to employ machine learning models for binary classification and NLP to predict tweets genuinely related to disasters. 
 
 % PLEAE CHANGE THE TITLE of this section
-\section{Example of in-text citation of references in \LaTeX} 
-% Note the use of \cite{} and \citep{}
-The references in a report relate your content with the relevant sources, papers, and the works of others. To include references in a report, we \textit{cite} them in the texts. In MS-Word, EndNote, or MS-Word references, or plain text as a list can be used. Similarly, in \LaTeX, you can use the ``thebibliography'' environment, which is similar to the plain text as a list arrangement like the MS word. However, In \LaTeX, the most convenient way is to use the BibTex, which takes the references in a particular format [see references.bib file of this template] and lists them in style [APA, Harvard, etc.] as we want with the help of proper packages.    
-
-These are the examples of how to \textit{cite} external sources, seminal works, and research papers. In \LaTeX, if you use ``\textbf{BibTex}'' you do not have to worry much since the proper use of a bibliographystyle package like ``agsm for the Harvard style'' and little rectification of the content in a BiBText source file [In this template, BibTex are stored in the ``references.bib'' file], we can conveniently generate  a reference style. 
-
-Take a note of the commands \textbackslash cite\{\} and \textbackslash citep\{\}. The command \textbackslash cite\{\} will write like ``Author et al. (2019)'' style for Harvard, APA and Chicago style. The command \textbackslash citep\{\} will write like ``(Author et al., 2019).'' Depending on how you construct a sentence, you need to use them smartly. Check the examples of \textbf{in-text citation} of sources listed here [This template recommends the \textbf{Harvard style} of referencing.]:
-\begin{itemize}
-    \item \cite{lamport1994latex} has written a comprehensive guide on writing in \LaTeX ~[Example of \textbackslash cite\{\} ].
-    \item If \LaTeX~is used efficiently and effectively, it helps in writing a very high-quality project report~\citep{lamport1994latex} ~[Example of \textbackslash citep\{\} ].   
-    \item A detailed APA, Harvard, and Chicago referencing style guide are available in~\citep{uor_refernce_style}.
-\end{itemize}
-
-\noindent 
-Example of a numbered list:
-\begin{enumerate}
-    \item \cite{lamport1994latex} has written a comprehensive guide on writing in \LaTeX.
-    \item If \LaTeX is used efficiently and effectively, it helps in writing a very high-quality project report~\citep{lamport1994latex}.   
-\end{enumerate}
-
-% PLEAE CHANGE THE TITLE of this section
-\section{Example of ``risk'' of unintentional plagiarism}
-Using other sources, ideas, and material always bring with it a risk of unintentional plagiarism. 
-
-\noindent
-\textbf{\color{red}MUST}: do read the university guidelines on the definition of plagiarism as well as the guidelines on how to avoid plagiarism~\citep{uor_plagiarism}.
-
-
-
+\section{Related Work} 
+In the research \cite{chanda2021efficacy} extensive evaluation of Deep Learning methods for classifying disaster-related tweets. Identification of preprocessing steps, emphasizing named entity substitution.Performance analysis of custom neural networks and Transformer models.Emphasis on practical application potential for automatic disaster detection. BERT is used in \cite{deb2022comparative} where exploration of Twitter's real-time data for disaster identification and challenges in manual data processing due to volume is elaborated. Evaluation of BERT embeddings' superiority in disaster prediction, compared to traditional word embeddings. Discussion on opportunities and challenges of BERT embeddings in Twitter sentiment analysis. Detailed analysis for various algorithms are explored in \cite{fontalis2023comparative} Theoretical basis of various ML algorithms for tweet analysis (BNB, MNB, LR, KNN, DT, RF).Process flow from dataset import to model training, emphasizing the importance of Exploratory Data Analysis (EDA).
+Selection of ML models based on suitability, using Wordclouds for identifying relevant words.Explanation of Bayesian algorithms, logistic regression, decision tree, and random forest usage.\cite{iparraguirre2023classification}Exploration of BERT embeddings' effectiveness in disaster prediction on social media. Overview of challenges in manual disaster identification due to data volume. Application of different word embeddings (BOW, context-free, contextual) in disaster prediction models.
+Utilization of embeddings in both traditional ML methods and neural network-based models.In \cite{saddam2023sentiment}Studies introduce normalization processes for words with similar meanings. Stemming, using the Indonesian literary library in Python, maximizes text processing efficieny. Machine learning involves labeling real opinions, crucial for SVM model training.
+SVM models, especially for multiclass classification, are discussed for sentiment analysis. K-Fold Cross Validation ensures robust testing, evaluating accuracy, precision, recall, and F-score. Confusion matrices aid in a comprehensive understanding of model performance.
 
 % A possible section of you chapter
 \section{Critique of the review} % Use this section title or choose a betterone
-Describe your main findings and evaluation of the literature. ~\\
+Existing research demonstrates the effectiveness of advanced techniques such as deep learning models and contextual embeddings for disaster-related sentiment analysis. Critique emphasizes the need for continuous improvement in addressing challenges related to bias mitigation and contextual understanding.
 
 % Pleae use this section
 \section{Summary} 
-Write a summary of this chapter~\\
+The literature review underscores the significance of sophisticated preprocessing techniques, advanced text processing, and the application of machine learning models for disaster-related sentiment analysis on Twitter. Key findings highlight the potential of deep learning and contextual embeddings in achieving accurate disaster detection, with practical implications for real-world applications. Continuous improvement is encouraged to address existing challenges and further enhance the reliability of sentiment analysis systems.
