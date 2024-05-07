@@ -2,15 +2,20 @@
 
 The training and evaluation of the logistic regression model yielded promising results, with a training accuracy of 96 percent and a validation accuracy of 75 percent. This indicates that the model performed well in learning from the training data but showed a slight decrease in accuracy when tested on unseen validation data. On the other hand, the DistilBERT model achieved a training accuracy of 93 percent and a validation accuracy of 77 percent, showcasing its capability in handling complex textual data and performing consistently across both training and validation sets.
 
-Further optimization using DistilBERT with AUTOTUNE led to significant improvements, with a training accuracy of 98percent and a validation accuracy of 78 percent. The dynamic optimization provided by AUTOTUNE played a crucial role in enhancing the model's generalization ability, allowing it to maintain high accuracy on unseen data while leveraging efficient resource utilization.
+Further optimization using DistilBERT with Explicitly applied AUTOTUNE led to significant improvements, with a training accuracy of 98percent and a validation accuracy of 78 percent. The dynamic optimization provided by AUTOTUNE played a crucial role in enhancing the model's generalization ability, allowing it to maintain high accuracy on unseen data while leveraging efficient resource utilization.
 \label{ch:results}
 \begin{table}[ht]
 \caption{Performance Comparison of Different Models}
 \begin{tabular}{lllll}
 
-model                           & Traning score & Validation score & Time to train model &  \\
-Logistic regression             & 96            & 75               & 1s                  &  \\
-Distilbert with parameter table & 93            & 77               & 4m                  &  \\
-Distilbert with Autotune        & 98            & 78               & 7m                  & 
+model                           & Traning score & Validation score \\
+Logistic regression             & 96            & 75              &  \\
+Distilbert with EPOCH=4 & 93            & 77                      &  \\
+Distilbert with EPOCH=7 & 98            & 78                      &  \\
+Distilbert with EPOCH=2 & 86           & 81                      &  \\
+
 \end{tabular}
 \end{table}
+
+AUTO = tf.data.experimental.AUTOTUNE and explicitly applying tf.data.AUTOTUNE.
+both methods aim to achieve similar optimization goals without imposing a noticeable overhead on training time.

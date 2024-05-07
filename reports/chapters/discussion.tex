@@ -1,21 +1,21 @@
 \chapter{Discussion and Analysis}
 \label{ch:evaluation}
 
-Depending on the type of project you are doing, this chapter can be merged with ``Results'' Chapter as `` Results and Discussion'' as suggested by your supervisor. 
 
-In the case of software development and the standalone applications, describe the significance of the obtained results/performance of the system. 
+\section{DistilBERT}
 
+\textbf{ADAM:}
+When working on binary classification tasks in NLP like sentiment analysis (positive/negative), spam detection (spam/ham), or topic classification (relevant/irrelevant), the selection of optimizer plays a crucial role in shaping the training process and model performance.
+Here Adam optimizer is used with DistilBert, it extensively utilized and generally exhibits strong performance across various NLP tasks involving binary classification. Blends the advantages of adaptive learning rates and momentum, proving effective in handling sparse gradients and noisy data.
+Converges swiftly and manages large-scale datasets efficiently.
+Adam is often a reliable and efficient default optimizer for binary classification tasks in NLP. Its robustness, quick convergence, and good generalization make it a recommended choice.
 
+\textbf{Batch Size}: This parameter decides how many training examples are utilized in each iteration of gradient descent within a single epoch. For instance, if your batch size is set to 32, the model adjusts its weights after handling 32 training examples. A larger batch size may accelerate training but could demand more memory, while a smaller batch size could yield a more precise gradient estimate albeit potentially slowing down training.
 
-\section{A section}% please use an appropriate section title
-Discussion and analysis chapter evaluates and analyses the results. It interprets the obtained results. 
+\textbf{Steps per Epoch:} Calculated from the total training examples and the batch size, steps per epoch indicates the iterations necessary to complete one epoch. For example, if you have 1000 training examples and a batch size of 32, you'd compute 1000 / 32 = 31.25 steps per epoch. In practice, this number is rounded down to the nearest whole number, making it 31 steps per epoch in this scenario.
 
+\textbf{Epoch:} An epoch signifies a complete traversal through the entire training dataset. In each epoch, the model undergoes iterations equal to the steps per epoch, with each iteration handling a batch of training examples dictated by the batch size. Once all these iterations are done, one epoch concludes.
 
+For distilBERT, When you employ AUTO = tf.data.experimental.AUTOTUNE in TensorFlow, the system autonomously fine-tunes the data loading process based on the available hardware, managing aspects like parallel reads, prefetching, and batching. This optimization aims to maximize CPU and GPU usage, potentially resulting in quicker data processing and training compared to setting these parameters manually.
 
-\section{Significance of the findings}
-In this chapter, you should also try to discuss the significance of the results and key findings, in order to enhance the reader's understanding of the investigated problem
-
-\section{Limitations} % please discuss limitation of the project 
-Discuss the key limitations and potential implications or improvements of the findings.
-\section{Summary}
-Write a summary of this chapter.
+Manually incorporating tf.data.AUTOTUNE into your data pipeline operations—like prefetching and parallel reads—can achieve a similar optimization. However, it necessitates a grasp of hardware capabilities and the adjustment of parameters accordingly.

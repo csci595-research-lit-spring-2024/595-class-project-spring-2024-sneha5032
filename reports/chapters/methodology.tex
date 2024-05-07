@@ -187,24 +187,51 @@ Resource Utilization: By adaptively tuning parameters such as buffer sizes and p
 Conclusion:
 
 The use of AUTOTUNE in TensorFlow significantly enhances the efficiency of data loading and preprocessing pipelines in deep learning workflows. By dynamically optimizing parameters based on system conditions, AUTOTUNE improves training performance, accelerates convergence, and maximizes resource utilization, making it a valuable tool for deep learning practitioners.
-
-\begin{figure}[ht]
+\usepackage{float}
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{figures/autotune_trainingValidation.png}
     \caption{Distilbert with autotune accuracy and loss graph}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{figures/Distilbert_autotune_Training_confusion_matrix.png}
     \caption{Distilbert with autotune}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{figures/Distilbert_autotune_Validation_confusion_matrix.png}
     \caption{Distilbert with autotune}
 \end{figure}
+
+
+\newpage 
+\section{Best Accuracy of DistilBERT}
+By examining the graphs, it's evident that the validation accuracy peaks at EPOCH=2. Consequently, we trained the model specifically with EPOCH=2, resulting in an accuracy boost to 81 percent. This indicates a case of overfitting due to excessive training, as the model's performance improved initially but then started to deteriorate.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{figures/epoch2.png}
+    \caption{Distilbert with EPOCH=2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{figures/epoch2_training.png}
+    \caption{Distilbert with EPOCH=2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{figures/epoch2_validation.png}
+    \caption{Distilbert with EPOCH=2}
+\end{figure}
+
+
+
+
 
 \newpage
 \section{Summary}
